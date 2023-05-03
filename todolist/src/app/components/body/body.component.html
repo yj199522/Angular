@@ -1,0 +1,7 @@
+<div class="bodyParent">
+    <app-active-task *ngIf="hasRouter('/active')"></app-active-task>
+    <app-complete-task *ngIf="hasRouter('/complete')"></app-complete-task>
+    <app-waitlist-task *ngIf="hasRouter('/waitlist')"></app-waitlist-task>
+    <app-add-task *ngIf="hasRouter('/add')"></app-add-task>
+    <app-edit-task *ngIf="hasRouter('/edit')"></app-edit-task>
+</div>

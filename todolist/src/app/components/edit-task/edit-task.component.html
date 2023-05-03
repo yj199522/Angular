@@ -1,0 +1,11 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="title">Task</label>
+        <input name="title" [(ngModel)]="title" id="title" type="text" placeholder="Please Enter the name of Task"/>
+    </div>
+    <div class="form-control">
+        <label for="description">Description</label>
+        <input name="description" [(ngModel)]="description" id="description" type="text" placeholder="Add description (optional)"/>
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-primary"/>
+</form>

@@ -1,0 +1,44 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <!-- <th scope="col">Due Date</th> -->
+      <th scope="col">Change Status</th>
+      <th scope="col">Edit Details</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of taskList; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <!-- <td>{{ task.date }}</td> -->
+      <td>
+        <div ngbDropdown class="d-inline-block">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            {{ task.status }}
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button
+              *ngFor="let status of dropdown"
+              ngbDropdownItem
+              (click)="selectedOption(task, status)"
+            >
+              {{ status }}
+            </button>
+          </div>
+        </div>
+      </td>
+      <th><app-button title="Edit" (onButtonClick)="editTask(task)"></app-button></th>
+      <th><app-button title="Delete" (onButtonClick)="deleteTask(task)"></app-button></th>
+    </tr>
+  </tbody>
+</table>

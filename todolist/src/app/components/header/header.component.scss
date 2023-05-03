@@ -1,0 +1,16 @@
+.headerClass {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: bisque;
+  height: 50px;
+
+  .headerTextParent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}

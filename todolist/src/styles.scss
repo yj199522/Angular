@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+app-sidebar{
+    width: 25%;
+    background: white;
+}
+
+app-body{
+    width: 75%;
+}
+
+app-active-task, app-complete-task, app-waitlist-task{
+    width: 100%;
+    height: 100%;
+}
+
+app-add-task{
+    width: 80%;
+}

@@ -1,0 +1,9 @@
+<div class="title">{{ title }}</div>
+<div *ngIf="!taskList.length">No data Available</div>
+<app-task
+  *ngIf="taskList.length"
+  (deleteDetails)="deleteTask($event)"
+  [taskList]="taskList"
+  (editDetails)="editTask($event)"
+  (changeStatus)="updateData($event)"
+></app-task>

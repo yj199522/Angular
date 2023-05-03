@@ -1,0 +1,14 @@
+.footerClass{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: bisque;
+    .footerTextClass{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
